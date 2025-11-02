@@ -54,6 +54,8 @@ repos:
     rev: <LATEST_VERSION>
     hooks:
         - id: sync-ai-coding-instructions
+          # Optional: override the default AGENTS/CLAUDE/GEMINI list.
+          # args: [--files, AGENTS.md,CLAUDE.md,GEMINI.md]
 ```
 
 3. Run `pre-commit install` inside your project to enable the hook.
@@ -87,5 +89,12 @@ Alternatively, execute via Python without installing:
 python -m sync_ai_coding_instructions.main --path /path/to/project
 ```
 
+Provide a custom comma-separated file list with `--files`. At least two file
+names are required:
+
+```bash
+sync-ai-coding-instructions --files AGENTS.md,CLARITY.md,GEMINI.md
+```
+
 The command exits with status codes indicating whether files were created,
-synced, or untouched.
+synced, or untouched (non-zero when files are created or updated).

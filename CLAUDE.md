@@ -16,5 +16,7 @@ updated).
 - `README.md` – instructions and high-level overview.
 
 Install dependencies, run `pytest` to execute the test suite, and use
-`python -m sync_ai_coding_instructions.main` (or `sync-ai-md` once installed)
-to synchronize the markdown files.
+`python -m sync_ai_coding_instructions.main` (or the
+`sync-ai-coding-instructions` console script once installed) to synchronize the
+markdown files. Pass a custom comma-separated list through `--files` when you
+need to keep additional instruction files in sync.
