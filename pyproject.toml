@@ -1,0 +1,23 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61.0"]
+
+[project]
+name = "sync-ai-coding-instructions"
+version = "0.1.0"
+dependencies = []
+requires-python = ">=3.10"
+authors = [{name = "jsh9"}]
+description = "CLI tool to synchronize AGENTS, CLAUDE, and GEMINI markdown files."
+readme = "README.md"
+
+[project.scripts]
+sync-ai-coding-instructions = "sync_ai_coding_instructions.main:main"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["sync_ai_coding_instructions*"]
+where = ["."]
