@@ -1,0 +1,8 @@
+---
+- id: sync-ai-coding-instructions
+  name: sync-ai-coding-instructions
+  description: Synchronize AGENTS.md, CLAUDE.md, and GEMINI.md files.
+  entry: sync-ai-coding-instructions
+  language: python
+  types: [markdown]
+  pass_filenames: false
